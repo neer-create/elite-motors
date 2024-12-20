@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Motors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.5;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #212121;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            font-size: 3.5em;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        header .logo p {
+            font-size: 1.5em;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .section-contact {
+            padding: 50px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .section-contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .section-contact p {
+            font-size: 1.2em;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #212121;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        label{
+            font-size: 1.2em;
+        }
+
+        input{
+            font-size: 1.2em;
+        }
+
+        footer b, u{
+            color: green;
+            text-shadow: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Elite Motors</h1>
+            <p>The Future of Luxury Driving</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Models</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="showrooms.html">Showrooms</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact" class="section-contact">
+        <form id="contactForm" action="submit-form.html" method="post" onsubmit="showThankYouMessage(event)">
+        <label for="fname">First Name:</label>
+        <br>
+        <input type="text" id="fname" name="first_name" placeholder="Enter your first name" required>
+        <br><br>
+        <label for="lname">Last Name:</label>
+        <br>
+        <input type="text" id="lname" name="last_name" placeholder="Enter your last name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <button type="submit">Submit</button>
+        </form>
+    <p id="thankYouMessage" style="display: none; color: green; font-size: 1.2em; margin-top: 20px;">
+        Thank you for submitting your response!
+        </p>
+        <p>Ready to take the next step in luxury driving? Get in touch with us today:</p>
+        <p><strong>Address:</strong> 123 Luxury Drive, New York, NY, USA</p>
+        <p><strong>Email:</strong> contact@elitemotors.com</p>
+        <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+    </section>
+    <script>
+        function showThankYouMessage(event) {
+            event.preventDefault(); 
+            document.getElementById("thankYouMessage").style.display = "block";
+            document.getElementById("contactForm").reset(); 
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Elite Motors. All Rights Reserved. Work Done by <u><B>Aneer Abbas Hashmi</B></u> 
+            Surpervised By <b><u>Sir Mohammed Umer</u></b></p>
+    </footer>
+
+</body>
+
+</html>
